@@ -1,3 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const MyWallet = () => <div>My Wallet page</div>
+export const MyWallet = () => <div>My Wallet page</div>;

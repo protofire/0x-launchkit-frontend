@@ -1,3 +1,3 @@
-import { IStoreState } from './types'
+import { StoreState } from './types';
 
-export const getEthAccount = (state: IStoreState) => state.blockchain.ethAccount
+export const getEthAccount = (state: StoreState) => state.blockchain.ethAccount;

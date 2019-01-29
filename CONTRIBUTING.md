@@ -1,26 +1,23 @@
-Contributing to 0x-launchkit-frontend
-=======================
+# Contributing to 0x-launchkit-frontend
 
 _Thanks for considering contributing to `0x-launchkit-frontend`!_
 
 The following is a set of guidelines for contributions. Feel free to suggest
 improvements to this document in a pull request.
 
-Issues and feature requests
----------------------------
+## Issues and feature requests
 
 If you have any issues to report or features to request, please use the
 [issue tracker](https://github.com/protofire/0x-launchkit-frontend/issues).
 
-Development
------------
+## Development
 
 ### Requirements
 
 In order to develop livepeer-alerts-backend, you'll need:
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/)
+-   [Git](https://git-scm.com/)
+-   [Node.js](https://nodejs.org/)
 
 ### Getting Started
 
@@ -37,8 +34,7 @@ passing. If you contribute with a new feature, please add tests for it. To run t
 
     $ npm test
 
-Pull Requests
--------------
+## Pull Requests
 
 All code changes happen through pull requests. To create one:
 
@@ -47,8 +43,6 @@ All code changes happen through pull requests. To create one:
 3. Ensure the tests are still passing. Please remember to add tests for new features.
 4. Create the pull request.
 
-
-License
--------
+## License
 
 By contributing, you agree that your contributions will be licensed under its MIT License.

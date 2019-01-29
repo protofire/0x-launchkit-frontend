@@ -1,4 +1,1 @@
-export {
-  WalletConnectionStatus,
-  WalletConnectionStatusContainer
-} from './wallet_connection_status'
+export { WalletConnectionStatus, WalletConnectionStatusContainer } from './wallet_connection_status';

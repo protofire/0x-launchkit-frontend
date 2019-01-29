@@ -1,19 +1,18 @@
-import { Web3Wrapper } from '@0x/web3-wrapper'
-import { ERC20AssetData } from '@0x/types'
-import { BigNumber, assetDataUtils } from '0x.js'
-import { getTokenDataByAddress } from '../common/tokens'
+import { assetDataUtils, BigNumber } from '0x.js';
+import { ERC20AssetData } from '@0x/types';
+import { Web3Wrapper } from '@0x/web3-wrapper';
+
+import { getTokenDataByAddress } from '../common/tokens';
 
 const getAssetAmountAsBignumber = (assetAmount: BigNumber, assetData: string): BigNumber => {
-  const makerAssetData = assetDataUtils.decodeAssetDataOrThrow(assetData) as ERC20AssetData
-  const tokenData = getTokenDataByAddress(makerAssetData.tokenAddress)
-  const bnAssetAmount = new BigNumber(assetAmount)
-  return Web3Wrapper.toUnitAmount(bnAssetAmount, tokenData.decimals)
-}
+    const makerAssetData = assetDataUtils.decodeAssetDataOrThrow(assetData) as ERC20AssetData;
+    const tokenData = getTokenDataByAddress(makerAssetData.tokenAddress);
+    const bnAssetAmount = new BigNumber(assetAmount);
+    return Web3Wrapper.toUnitAmount(bnAssetAmount, tokenData.decimals);
+};
 
 const bignumberAmountAsUIString = (amount: BigNumber, fixed: number): string => {
-  return amount
-    .toFixed(fixed)
-    .toString()
-}
+    return amount.toFixed(fixed).toString();
+};
 
-export { getAssetAmountAsBignumber, bignumberAmountAsUIString }
+export { getAssetAmountAsBignumber, bignumberAmountAsUIString };

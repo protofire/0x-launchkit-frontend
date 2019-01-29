@@ -1,1 +1,1 @@
-export { AssetPairsList } from './asset_pairs_list'
+export { AssetPairsList } from './asset_pairs_list';

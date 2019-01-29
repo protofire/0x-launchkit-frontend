@@ -1,5 +1,5 @@
-import log from 'loglevel'
+import log from 'loglevel';
 
-log.setDefaultLevel(log.levels.TRACE)
+log.setDefaultLevel(log.levels.TRACE);
 
-export { log }
+export { log };
