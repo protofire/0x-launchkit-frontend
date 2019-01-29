@@ -1,11 +1,11 @@
 import { RouterState } from 'connected-react-router';
 
-export interface IBlockchainState {
+export interface BlockchainState {
     readonly ethAccount: string;
     readonly web3State: string;
 }
 
-export interface IStoreState {
+export interface StoreState {
     readonly router: RouterState;
-    readonly blockchain: IBlockchainState;
+    readonly blockchain: BlockchainState;
 }

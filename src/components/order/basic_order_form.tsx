@@ -2,19 +2,19 @@ import BigNumber from 'bignumber.js';
 import { Button, Control, Field, Input, Label } from 'bloomer';
 import React from 'react';
 
-interface IBasicOrderFormProps {
+interface BasicOrderFormProps {
     makerAssetLabel: string;
     takerAssetLabel: string;
     onSubmit: (args: { makerAssetAmount: BigNumber; takerAssetAmount: BigNumber }) => any;
 }
 
-interface IBasicOrderFormState {
+interface BasicOrderFormState {
     makerAmount: number;
     takerAmount: number;
     isLoading: boolean;
 }
 
-const DEFAULT_STATE: IBasicOrderFormState = {
+const DEFAULT_STATE: BasicOrderFormState = {
     makerAmount: 0,
     takerAmount: 0,
     isLoading: false,
@@ -24,7 +24,7 @@ const DEFAULT_STATE: IBasicOrderFormState = {
  * Basic order form (no validations) that allows to specify maker & taker asset
  * labels and callback function with the corresponding amounts (already converted) to BigNumber.
  */
-class BasicOrderForm extends React.Component<IBasicOrderFormProps, IBasicOrderFormState> {
+class BasicOrderForm extends React.Component<BasicOrderFormProps, BasicOrderFormState> {
     public state = { ...DEFAULT_STATE};
 
     public onMakerAmountChange = (evt: React.BaseSyntheticEvent) => {

@@ -4,16 +4,16 @@ import { combineReducers } from 'redux';
 import { ActionType, getType } from 'typesafe-actions';
 
 import * as actions from './actions';
-import { IBlockchainState, IStoreState } from './types';
+import { BlockchainState, StoreState } from './types';
 
 export type RootAction = ActionType<typeof actions>;
 
-const initialState: IBlockchainState = {
+const initialState: BlockchainState = {
     ethAccount: '',
     web3State: 'loading',
 };
 
-export function blockchain(state: IBlockchainState = initialState, action: RootAction): IBlockchainState {
+export function blockchain(state: BlockchainState = initialState, action: RootAction): BlockchainState {
     switch (action.type) {
         case getType(actions.setEthAccount):
             return { ...state, ethAccount: action.payload };
@@ -24,7 +24,7 @@ export function blockchain(state: IBlockchainState = initialState, action: RootA
 }
 
 export const createRootReducer = (history: History) =>
-    combineReducers<IStoreState>({
+    combineReducers<StoreState>({
         router: connectRouter(history),
         blockchain,
     });

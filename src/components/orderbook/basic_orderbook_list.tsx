@@ -21,20 +21,20 @@ const DEFAULT_PAGINATED_COLLECTION: PaginatedCollection<APIOrder> = {
     records: [],
 };
 
-interface IBasicOrderBookListProps {
+interface BasicOrderBookListProps {
     relayerClient?: HttpClient;
     baseTokenSymbol: string;
     quoteTokenSymbol: string;
 }
 
-interface IBasicOrderBookListState {
+interface BasicOrderBookListState {
     relayerClient: HttpClient;
     asks: PaginatedCollection<APIOrder>;
     bids: PaginatedCollection<APIOrder>;
     loading: boolean;
 }
 
-class BasicOrderBookList extends React.Component<IBasicOrderBookListProps, IBasicOrderBookListState> {
+class BasicOrderBookList extends React.Component<BasicOrderBookListProps, BasicOrderBookListState> {
     public state = {
         relayerClient: this.props.relayerClient || getRelayerClient(),
         asks: { ...DEFAULT_PAGINATED_COLLECTION },

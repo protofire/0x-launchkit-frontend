@@ -13,19 +13,19 @@ import { getRelayerClient } from '../../lib/get_relayer_client';
 const logger = log.getLogger('AssetPairs');
 const DEFAULT_PER_PAGE = 5;
 
-interface IBasicMakerOrdersListProps {
+interface BasicMakerOrdersListProps {
     relayerClient?: HttpClient;
     perPage?: number;
     ethAccount: string;
 }
 
-interface IBasicMakerOrdersListState {
+interface BasicMakerOrdersListState {
     loading: boolean;
     paginatedCollection: PaginatedCollection<APIOrder>;
     relayerClient: HttpClient;
 }
 
-class BasicMakerOrdersList extends React.Component<IBasicMakerOrdersListProps, IBasicMakerOrdersListState> {
+class BasicMakerOrdersList extends React.Component<BasicMakerOrdersListProps, BasicMakerOrdersListState> {
     public state = {
         loading: true,
         paginatedCollection: {
@@ -37,7 +37,7 @@ class BasicMakerOrdersList extends React.Component<IBasicMakerOrdersListProps, I
         relayerClient: this.props.relayerClient || getRelayerClient(),
     };
 
-    public componentDidUpdate = async (prevProps: IBasicMakerOrdersListProps) => {
+    public componentDidUpdate = async (prevProps: BasicMakerOrdersListProps) => {
         if (prevProps.ethAccount !== this.props.ethAccount) {
             this.getOrders();
         }

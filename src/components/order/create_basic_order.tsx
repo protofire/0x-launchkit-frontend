@@ -11,19 +11,19 @@ import { BasicOrderForm } from './basic_order_form';
 
 const logger = log.getLogger('CreateBasicOrder');
 
-export interface ICreateBasicOrderProps {
+export interface CreateBasicOrderProps {
     makerAssetSymbol: string;
     takerAssetSymbol: string;
     web3?: any;
 }
 
-interface ICreateBasicOrderState {
+interface CreateBasicOrderState {
     makerAssetTokenData: ITokenData;
     takerAssetTokenData: ITokenData;
     ethAccount: string;
 }
 
-class CreateBasicOrder extends React.Component<ICreateBasicOrderProps, ICreateBasicOrderState> {
+class CreateBasicOrder extends React.Component<CreateBasicOrderProps, CreateBasicOrderState> {
     public state = {
         makerAssetTokenData: getTokenDataBySymbol(this.props.makerAssetSymbol),
         takerAssetTokenData: getTokenDataBySymbol(this.props.takerAssetSymbol),

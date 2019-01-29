@@ -10,15 +10,15 @@ import { getRelayerClient } from '../../lib/get_relayer_client';
 
 const logger = log.getLogger('AssetPairs');
 
-interface IAssetPairsListState {
+interface AssetPairsListState {
     assetPairs: AssetPairsItem[];
 }
 
-interface ITokenDataPair {
+interface TokenDataPair {
     [key: string]: ITokenData;
 }
 
-class AssetPairsList extends React.Component<{}, IAssetPairsListState> {
+class AssetPairsList extends React.Component<{}, AssetPairsListState> {
     public state = {
       assetPairs: [],
     };
@@ -39,7 +39,7 @@ class AssetPairsList extends React.Component<{}, IAssetPairsListState> {
     public render = () => {
         const assetPairs: AssetPairsItem[] = this.state.assetPairs;
         const tokenDataPairs = this._mapAssetPairsToTokenDataPairs(assetPairs);
-        const tokenDataPairsAsTableRows = tokenDataPairs.map((tokenDataPair: ITokenDataPair) => {
+        const tokenDataPairsAsTableRows = tokenDataPairs.map((tokenDataPair: TokenDataPair) => {
             const symbols = Object.keys(tokenDataPair);
             const tokenA = tokenDataPair[symbols[0]];
             const tokenB = tokenDataPair[symbols[1]];
@@ -73,7 +73,7 @@ class AssetPairsList extends React.Component<{}, IAssetPairsListState> {
         );
     };
 
-    private _mapAssetPairsToTokenDataPairs = (assetPairs: AssetPairsItem[]): ITokenDataPair[] => {
+    private _mapAssetPairsToTokenDataPairs = (assetPairs: AssetPairsItem[]): TokenDataPair[] => {
         return assetPairs.map((ap: AssetPairsItem) => {
             const assetDataA = assetDataUtils.decodeAssetDataOrThrow(ap.assetDataA.assetData) as ERC20AssetData;
             const assetDataB = assetDataUtils.decodeAssetDataOrThrow(ap.assetDataB.assetData) as ERC20AssetData;

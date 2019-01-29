@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { getEthAccount } from '../../store/selectors';
-import { IStoreState } from '../../store/types';
+import { StoreState } from '../../store/types';
 
-interface IPropsFromState {
+interface PropsFromState {
     ethAccount: string;
 }
 
-type WalletConnectionStatusProps = IPropsFromState;
+type WalletConnectionStatusProps = PropsFromState;
 
 class WalletConnectionStatus extends React.PureComponent<WalletConnectionStatusProps> {
     public render = () => {
@@ -21,7 +21,7 @@ class WalletConnectionStatus extends React.PureComponent<WalletConnectionStatusP
     };
 }
 
-const mapStateToProps = (state: IStoreState): IPropsFromState => {
+const mapStateToProps = (state: StoreState): PropsFromState => {
     return {
         ethAccount: getEthAccount(state),
     };
