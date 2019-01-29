@@ -1,8 +1,7 @@
-import { HttpClient } from '@0x/connect'
-import { DEFAULT_RELAYER_URL } from '../common/constants'
+import { HttpClient } from '@0x/connect';
 
-const getRelayerClient = (url: string = DEFAULT_RELAYER_URL): HttpClient => {
-  return new HttpClient(url)
-}
+import { DEFAULT_RELAYER_URL } from '../common/constants';
 
-export default getRelayerClient
+export const getRelayerClient = (url: string = DEFAULT_RELAYER_URL): HttpClient => {
+    return new HttpClient(url);
+};

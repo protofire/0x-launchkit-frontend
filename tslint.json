@@ -1,18 +1,9 @@
 {
-  "defaultSeverity": "error",
-  "extends": [
-    "tslint:recommended",
-    "tslint-config-standard",
-    "tslint-react"
-  ],
-  "jsRules": {},
-  "rules": {
-    "ordered-imports": false,
-    "object-literal-sort-keys": false,
-    "member-ordering": false,
-    "jsx-no-lambda": false,
-    "jsx-boolean-value": false,
-    "interface-name": false
-  },
-  "rulesDirectory": []
+    "extends": ["@0x/tslint-config"],
+    "rules": {
+        "custom-no-magic-numbers": false,
+        "semicolon": [true, "always", "ignore-bound-class-methods"],
+        "max-classes-per-file": false,
+        "switch-default": false
+    }
 }

@@ -23,9 +23,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Built With
 
-* [create-react-app](https://github.com/facebook/create-react-app) -
-Create React apps with no build configuration.
-* [bloomer](https://github.com/AlgusDark/bloomer) - A set of React components for Bulma
+-   [create-react-app](https://github.com/facebook/create-react-app) -
+    Create React apps with no build configuration.
+-   [bloomer](https://github.com/AlgusDark/bloomer) - A set of React components for Bulma
 
 ## License
 
