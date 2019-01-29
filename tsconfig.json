@@ -1,19 +1,23 @@
 {
     "compilerOptions": {
-        "target": "es2015",
+        "typeRoots": ["node_modules/@0x/typescript-typings/types", "node_modules/@types"],
         "module": "esnext",
-        "jsx": "preserve",
-        "strict": true,
-        "esModuleInterop": true,
+        "target": "es5",
+        "lib": ["es6", "dom"],
+        "sourceMap": true,
         "allowJs": true,
-        "skipLibCheck": false,
-        "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true,
+        "jsx": "react",
         "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "lib": ["dom", "dom.iterable", "esnext"]
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "esModuleInterop": true,
+        "noUnusedLocals": true
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": ["node_modules", "build", "scripts"]
 }
